@@ -114,7 +114,7 @@ public void Verify_upload_file() {
 //hashmap
 public void hashmap() {
 
-	HashMap<String, String> data= new HashMap<>();
+	HashMap<String, String> data= new HashMap<String, String>();
 	
 data.put("username", "password");
 }

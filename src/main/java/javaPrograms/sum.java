@@ -1,4 +1,4 @@
-package junk;
+package javaPrograms;
 
 import java.util.Scanner;
 

@@ -1,14 +1,14 @@
 $(document).ready(function() {
 CucumberHTML.timelineItems.pushArray([
   {
-    "id": "c8435be0-4188-4b68-9a04-af21af8d0713",
+    "id": "54470a61-d76d-45ce-acff-4f217b1fb967",
     "feature": "Amazon website automation",
-    "scenario": "Verify amazon search",
-    "start": 1702290336150,
+    "scenario": "Capture all the hyper links in Amazon HomePage",
+    "start": 1705316427289,
     "group": 1,
     "content": "",
-    "tags": "@amazon,",
-    "end": 1702290353196,
+    "tags": "@tc2,",
+    "end": 1705316437374,
     "className": "passed"
   }
 ]);

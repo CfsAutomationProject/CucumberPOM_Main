@@ -27,7 +27,7 @@ public class AccountsPage {
 
 	public List<String> getAccountsSectionsList() {
 
-		List<String> accountsList = new ArrayList<>();
+		List<String> accountsList = new ArrayList<String>();
 		List<WebElement> accountsHeaderList = driver.findElements(accountSections);
 
 		for (WebElement e : accountsHeaderList) {

@@ -1,4 +1,4 @@
-package junk;
+package javaPrograms;
 
 public class reverseSrting {
 

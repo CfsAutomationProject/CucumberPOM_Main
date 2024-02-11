@@ -2,6 +2,7 @@ package com.qa.factory;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
@@ -11,7 +12,7 @@ public class DriverFactory {
 
 	public WebDriver driver;
 
-	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
+	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>();
 
 	/**
 	 * This method is used to initialize the thradlocal driver on the basis of given
@@ -25,6 +26,12 @@ public class DriverFactory {
 		if (browser.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			tlDriver.set(new ChromeDriver());
+			
+		}else if(browser.equals("headless")) {
+			ChromeOptions options = new ChromeOptions();
+	            options.addArguments("headless");
+		driver=new ChromeDriver(options);
+			
 		} else if (browser.equals("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			tlDriver.set(new FirefoxDriver());
