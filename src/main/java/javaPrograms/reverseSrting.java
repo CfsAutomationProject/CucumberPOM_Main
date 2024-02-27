@@ -14,7 +14,7 @@ public class reverseSrting {
 		rev = rev+s.charAt(i);
 	}
 	
-
+System.out.println(rev);
 	
 	}
 	
