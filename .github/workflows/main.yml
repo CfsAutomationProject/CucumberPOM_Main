@@ -28,13 +28,9 @@ jobs:
         job-status: 'success'
 
     - name: Set JAVA_HOME
-      run: echo "JAVA_HOME=$(ls -d ${RUNNER_TOOL_CACHE}/jdk/*/)" >> $GITHUB_ENV
+      run: echo "JAVA_HOME=${RUNNER_TOOL_CACHE}/jdk/11" >> $GITHUB_ENV
 
     - name: Build with Maven
-      run: |
-        sudo update-java-alternatives -s java-11-openjdk-amd64
-        mvn clean test -Dcucumber.options="--tags @TC5"
+      run: mvn clean test -Dcucumber.options="--tags @TC5"
       env:
         JAVA_HOME: ${{ env.JAVA_HOME }}
-      
-
