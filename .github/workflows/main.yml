@@ -28,7 +28,7 @@ jobs:
         job-status: 'success'
 
     - name: Set JAVA_HOME
-      run: echo "$(echo ${RUNNER_TOOL_CACHE}/jdk/*/)" >> $GITHUB_ENV
+      run: echo "JAVA_HOME=$(ls -d ${RUNNER_TOOL_CACHE}/jdk/*/)" >> $GITHUB_ENV
 
     - name: Build with Maven
       run: mvn clean test -Dcucumber.options="--tags @TC5"
