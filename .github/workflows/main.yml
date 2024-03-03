@@ -28,5 +28,5 @@ jobs:
         job-status: 'success'
     
     - name: Build with Maven
-      run: mvn clean test -Dmaven.compiler.source=11 -Dmaven.compiler.target=11 -Dcucumber.options="--tags @TC5"
+      run: mvn clean test -Dcucumber.options="--tags @TC5" -Dmaven.compiler.source=11 -Dmaven.compiler.target=11
 
