@@ -26,7 +26,12 @@ jobs:
         server-password: ${{ github.token }}
         overwrite-settings: true
         job-status: 'success'
+
+    - name: Set JAVA_HOME
+      run: echo "::set-env name=JAVA_HOME::$(echo ${RUNNER_TOOL_CACHE}/jdk/*/)"
     
     - name: Build with Maven
-      run: mvn clean test -Dcucumber.options="--tags @TC5" -Dmaven.compiler.source=11 -Dmaven.compiler.target=11
+      env:
+        JAVA_HOME: ${{ env.JAVA_HOME }}
+      run: mvn clean test -Dcucumber.options="--tags @TC5"
 
