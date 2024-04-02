@@ -5,15 +5,17 @@ public class RevString {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-	String s="Rabbit Dog";
-	int length= s.length();
-	String reverse="";
+	String s="Dheeraj";
+	int Length = s.length();
+	String Rev= "";
 	
-	for(int i=length-1; i>=0; i--) {
+	for(int i=Length-1; i>=0; i--) {
 		
-		reverse=reverse+s.charAt(i);
+		Rev=Rev+s.charAt(i);
+		Rev.replace("i", "*");
+		
 	}
-	System.out.println(reverse);
+	System.out.println(Rev);
 
 }
 }
